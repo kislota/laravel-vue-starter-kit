@@ -160,6 +160,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        //JWTAuth Service Provider
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+
+        //JWTAuth Guard
+        Irazasyed\JwtAuthGuard\JwtAuthGuardServiceProvider::class,
     ],
 
     /*
