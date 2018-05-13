@@ -5,6 +5,7 @@
 /public/css
 /public/fonts
 /public/assets
+/public/*.json
 /storage/*.key
 /vendor
 /.idea
