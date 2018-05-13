@@ -16,13 +16,3 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-Route::group(['middleware'=>['jwt.auth']],function (){
-    Route::get('/auth-test', function (){
-        return response()->json(['test-data'=>'all is ok!']);
-    });
-});
-
-Route::get('/test', function (){
-    return response()->json(['test-data'=>'all is ok!']);
-});
