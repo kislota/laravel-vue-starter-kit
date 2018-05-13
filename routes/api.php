@@ -13,6 +13,23 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/test', function (){
+	return response()->json(['test-data'=>'all is ok!']);
+});
+
+Route::post('login', 'AuthController@login');
+//Route::post('register', 'AuthController@register');
+Route::post('recover', 'AuthController@recover');
+
+Route::post('password/reset/{token}', 'Auth\ResetPasswordController@postReset')->name('password.resetPost');
+
+
+Route::group(['middleware'=>['jwt.auth']],function () {
+
+	Route::get( '/auth-test', function () {
+		return response()->json( [ 'test-data' => 'all is ok!' ] );
+	} );
+
+	Route::get('/logged-user', 'UserController@showLoggedUserData')->name('user.showLoggedUserData');
+
 });
