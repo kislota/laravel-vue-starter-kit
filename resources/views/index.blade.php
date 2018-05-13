@@ -16,10 +16,11 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            <div class="content" id="app">
-                <example-component></example-component>
+            <div id="app">
+                <main-component></main-component>
             </div>
         </div>
     <script type="text/javascript" src="/js/app.js"></script>
+    <script type="text/javascript" src="/js/vendor.js"></script>
     </body>
 </html>
