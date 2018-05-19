@@ -14,7 +14,7 @@ php artisan key:generate
 
 php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
 
-php artisan jwt:generate
+php artisan jwt:secret 
 ```
 
 Create .env file using .env.example as the base.
